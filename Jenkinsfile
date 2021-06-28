@@ -3,7 +3,11 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "${startDate}"
+                properties([
+                            parameters([
+                                        password(name: 'KEY', description: 'Encryption key')
+                                      ])
+                          ])
             }
         }
     }

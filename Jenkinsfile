@@ -1,5 +1,5 @@
 properties([parameters([password(name: 'KEY',description : 'Encryption Key'), string(defaultValue: 'password', name: 'pwd', trim: true)])])
-node {  
+
 //     stage('Build') {
         
       
@@ -14,7 +14,9 @@ node {
 
 
 //     }
-    
+pipeline {
+   agent { label 'master' }
+   stages {
     stage('write') {
            steps {
                script {
@@ -33,5 +35,7 @@ node {
                }
            }
        }
+   }
+
 }
     

@@ -8,8 +8,8 @@ node {
 //         writeCSV file: 'output.csv', records: records, format: CSVFormat.EXCEL
 //         def amap = ["${params.KEY}" : "${params.pwd}"]
            def content = readCSV text: 'key,value\na,b'
-           assert records[0][0] == 'key'
-           assert records[1][1] == 'b'
+           assert content[0][0] == 'key'
+           assert content[1][1] == 'b'
            def records = readCSV file: 'dir/input.csv'
            assert records[0][0] == 'key'
            assert records[1][1] == 'b'

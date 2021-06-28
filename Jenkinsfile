@@ -7,4 +7,5 @@ node {
     stage('Build') { 
         echo "this is ${params.KEY}"
     }
+}
     

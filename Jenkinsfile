@@ -43,11 +43,9 @@ pipeline {
         timeout(time: 1, unit: 'HOURS') //abort after 1 hour if not completed
     }
 
-    properties([
     parameters([
         [$class: 'DateParameterDefinition', dateFormat: 'dd/MM/yyyyy', defaultValue: 'LocalDate.now();', description: 'Start date ', name: 'start_date'], [$class: 'DateParameterDefinition', dateFormat: 'dd/MM/yyyy', defaultValue: 'LocalDate.now().plusDays(1);', description: 'Last date', name: 'end_date']
         ])
-    ])
 
 
    stages {

@@ -45,8 +45,8 @@ pipeline {
 
     parameters{
      
-        DateParameterDefinition(name: 'start_date', dateFormat: 'dd/MM/yyyyy', defaultValue: 'LocalDate.now();', description: 'Start date ')
-        DateParameterDefinition(name: 'end_date', dateFormat: 'dd/MM/yyyy', defaultValue: 'LocalDate.now().plusDays(1);', description: 'Last date')
+        String(name: 'start_date', defaultValue: 'LocalDate.now();', description: 'Start date ')
+        String(name: 'end_date', defaultValue: 'LocalDate.now().plusDays(1);', description: 'Last date')
 //         [$class: 'DateParameterDefinition', dateFormat: 'dd/MM/yyyyy', defaultValue: 'LocalDate.now();', description: 'Start date ', name: 'start_date']
 //         [$class: 'DateParameterDefinition', dateFormat: 'dd/MM/yyyy', defaultValue: 'LocalDate.now().plusDays(1);', description: 'Last date', name: 'end_date']
     }
